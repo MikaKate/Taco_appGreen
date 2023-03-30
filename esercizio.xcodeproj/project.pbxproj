@@ -14,6 +14,8 @@
 		53B4E0B629CDB03200665140 /* esercizioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B4E0B529CDB03200665140 /* esercizioTests.swift */; };
 		53B4E0C029CDB03200665140 /* esercizioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B4E0BF29CDB03200665140 /* esercizioUITests.swift */; };
 		53B4E0C229CDB03200665140 /* esercizioUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B4E0C129CDB03200665140 /* esercizioUITestsLaunchTests.swift */; };
+		53B4E0CF29CDB52F00665140 /* Lista_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B4E0CE29CDB52F00665140 /* Lista_1.swift */; };
+		53B4E0D129CDBA0800665140 /* prova.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B4E0D029CDBA0800665140 /* prova.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		53B4E0BB29CDB03200665140 /* esercizioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = esercizioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		53B4E0BF29CDB03200665140 /* esercizioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = esercizioUITests.swift; sourceTree = "<group>"; };
 		53B4E0C129CDB03200665140 /* esercizioUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = esercizioUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		53B4E0CE29CDB52F00665140 /* Lista_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lista_1.swift; sourceTree = "<group>"; };
+		53B4E0D029CDBA0800665140 /* prova.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prova.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 			children = (
 				53B4E0A329CDB03100665140 /* esercizioApp.swift */,
 				53B4E0A529CDB03100665140 /* ContentView.swift */,
+				53B4E0CE29CDB52F00665140 /* Lista_1.swift */,
+				53B4E0D029CDBA0800665140 /* prova.swift */,
 				53B4E0A729CDB03200665140 /* Assets.xcassets */,
 				53B4E0A929CDB03200665140 /* esercizio.entitlements */,
 				53B4E0AA29CDB03200665140 /* Preview Content */,
@@ -261,6 +267,8 @@
 			files = (
 				53B4E0A629CDB03100665140 /* ContentView.swift in Sources */,
 				53B4E0A429CDB03100665140 /* esercizioApp.swift in Sources */,
+				53B4E0D129CDBA0800665140 /* prova.swift in Sources */,
+				53B4E0CF29CDB52F00665140 /* Lista_1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

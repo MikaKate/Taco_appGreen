@@ -9,13 +9,34 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        TabView {
+            NavigationView(){
+                List {
+                    NavigationLink("Lista 1", destination: Lista_1())
+                    Text("Name")
+                }
+                .navigationTitle("uffa")
+            }
+                .tabItem {
+                    Image(systemName: "checkmark")
+                    Text("Lists")
+                }
+            Text("Second View")
+                .tabItem {
+                    Image(systemName: "basket")
+                    Text("Products")
+                }
+            Text("Third View")
+                .tabItem {
+                    Image(systemName: "lightbulb")
+                    Text("For You")
+                }
+            Text("Fourth View")
+                .tabItem {
+                    Image(systemName: "person.crop.circle")
+                    Text("Profile")
+                }
         }
-        .padding()
     }
 }
 
@@ -24,3 +45,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
