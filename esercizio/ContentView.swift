@@ -19,6 +19,9 @@ struct ContentView: View {
     //variabili per la pagina "per te"
     let optionsForYou = ["For You", "More"]
     
+    //variabili per la pagina "Profilo"
+    let optionsProfile = ["Settings", "Favourites", "Friends"]
+    
     var body: some View {
         TabView {
             //Pagina delle liste
@@ -120,14 +123,38 @@ struct ContentView: View {
                         }
                     .pickerStyle(SegmentedPickerStyle())
                     .padding()
+                HStack{
+                    TextField("Insert the product name", text: $text)
+                        .padding(.horizontal, 20)
+                }
                 Spacer()
+                NavigationView(){
+                    List {
+                        NavigationLink("name-code-date", destination: Lista_1())
+                        NavigationLink("name-code-date", destination: Lista_1())
+                        NavigationLink("name-code-date", destination: Lista_1())
+                        Text("Name")
+                    }
+                }
+                
             }
                 .tabItem {
                     Image(systemName: "lightbulb")
                     Text("For You")
                 }
             //pagina del profilo
-            Text("Fourth View")
+            VStack {
+                Image(systemName: "person.circle")
+                    .font(.system(size: 100))
+                    .padding()
+                Picker(selection: $selectedOption, label: Text("")) {
+                        ForEach(0..<optionsProfile.count) { index in Text(optionsProfile[index]).tag(index)
+                            }
+                        }
+                    .pickerStyle(SegmentedPickerStyle())
+                    .padding()
+                Spacer()
+            }
                 .tabItem {
                     Image(systemName: "person.crop.circle")
                     Text("Profile")
