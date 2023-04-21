@@ -10,17 +10,17 @@ import SwiftUI
 struct ContentView: View {
     @State private var selectedOption = 0
     //variabili per la pagina "liste"
-    let optionsList = ["Recent", "Categories"]
+    @State private var optionsList = ["Recent", "Categories"]
 
     //variabili per la pagina "prodotti"
-    let optionsProducts = ["Low Risk", "All", "High Risk"]
+    @State private var optionsProducts = ["Low Risk", "All", "High Risk"]
     @State private var text = ""
     
     //variabili per la pagina "per te"
-    let optionsForYou = ["For You", "More"]
+    @State private var optionsForYou = ["For You", "More"]
     
     //variabili per la pagina "Profilo"
-    let optionsProfile = ["Settings", "Favourites", "Friends"]
+    @State private var optionsProfile = ["Settings", "Favourites", "Friends"]
     
     var body: some View {
         TabView {
@@ -41,7 +41,7 @@ struct ContentView: View {
                 }
                 .padding(.horizontal, 20)
                 Picker(selection: $selectedOption, label: Text("")) {
-                        ForEach(0..<optionsList.count) { index in Text(optionsList[index]).tag(index)
+                        ForEach(0..<2) { index in Text(optionsList[index]).tag(index)
                             }
                         }
                     .pickerStyle(SegmentedPickerStyle())
@@ -75,7 +75,7 @@ struct ContentView: View {
                 }
                 .padding(.horizontal, 20)
                 Picker(selection: $selectedOption, label: Text("")) {
-                            ForEach(0..<optionsProducts.count) { index in
+                            ForEach(0..<3) { index in
                                 Text(optionsProducts[index]).tag(index)
                             }
                         }
@@ -118,7 +118,7 @@ struct ContentView: View {
                 }
                 .padding(.horizontal, 20)
                 Picker(selection: $selectedOption, label: Text("")) {
-                        ForEach(0..<optionsForYou.count) { index in Text(optionsForYou[index]).tag(index)
+                        ForEach(0..<2) { index in Text(optionsForYou[index]).tag(index)
                             }
                         }
                     .pickerStyle(SegmentedPickerStyle())
@@ -127,7 +127,6 @@ struct ContentView: View {
                     TextField("Insert the product name", text: $text)
                         .padding(.horizontal, 20)
                 }
-                Spacer()
                 NavigationView(){
                     List {
                         NavigationLink("name-code-date", destination: Lista_1())
@@ -148,7 +147,7 @@ struct ContentView: View {
                     .font(.system(size: 100))
                     .padding()
                 Picker(selection: $selectedOption, label: Text("")) {
-                        ForEach(0..<optionsProfile.count) { index in Text(optionsProfile[index]).tag(index)
+                        ForEach(0..<3) { index in Text(optionsProfile[index]).tag(index)
                             }
                         }
                     .pickerStyle(SegmentedPickerStyle())
@@ -168,4 +167,3 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
-
