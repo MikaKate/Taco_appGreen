@@ -17,12 +17,6 @@ struct ContentView: View {
     @State private var optionsProducts = ["Low Risk", "All", "High Risk"]
     @State private var text = ""
     
-    //variabili per la pagina "per te"
-    @State private var optionsForYou = ["For You", "More"]
-    
-    //variabili per la pagina "Profilo"
-    @State private var optionsProfile = ["Settings", "Favourites", "Friends"]
-    
     var body: some View {
         TabView {
             //Pagina delle liste
@@ -47,16 +41,6 @@ struct ContentView: View {
                         }
                     .pickerStyle(SegmentedPickerStyle())
                     .padding()
-                /*
-                 NavigationView(){
-                     List {
-                         NavigationLink("name-code-date", destination: Lista_1())
-                         NavigationLink("name-code-date", destination: Lista_1())
-                         NavigationLink("name-code-date", destination: Lista_1())
-                         Text("Name")
-                     }
-                 }
-                 */
                 List(cards, id: \.title) { cards in
                     prova(card : cards)
                 }
@@ -101,67 +85,19 @@ struct ContentView: View {
                         Text("Name")
                     }
                 }
-                Spacer()
-                
             }
                 .tabItem {
                     Image(systemName: "basket")
                     Text("Products")
                 }
             //pagina dei per te
-            VStack{
-                HStack {
-                    Button(action: {
-                                // Azione del bottone
-                    }){
-                        Image(systemName: "magnifyingglass")
-                    }
-                    .opacity(0)
-                    Spacer()
-                    Button(action: {
-                                // Azione del bottone
-                    }){
-                        Image(systemName: "plus")
-                    }
-                }
-                .padding(.horizontal, 20)
-                Picker(selection: $selectedOption, label: Text("")) {
-                        ForEach(0..<2) { index in Text(optionsForYou[index]).tag(index)
-                            }
-                        }
-                    .pickerStyle(SegmentedPickerStyle())
-                    .padding()
-                HStack{
-                    TextField("Insert the product name", text: $text)
-                        .padding(.horizontal, 20)
-                }
-                NavigationView(){
-                    List {
-                        NavigationLink("name-code-date", destination: Lista_1())
-                        NavigationLink("name-code-date", destination: Lista_1())
-                        NavigationLink("name-code-date", destination: Lista_1())
-                        Text("Name")
-                    }
-                }
-                
-            }
+            ForYouView()
                 .tabItem {
                     Image(systemName: "lightbulb")
                     Text("For You")
                 }
             //pagina del profilo
-            VStack {
-                Image(systemName: "person.circle")
-                    .font(.system(size: 100))
-                    .padding()
-                Picker(selection: $selectedOption, label: Text("")) {
-                        ForEach(0..<3) { index in Text(optionsProfile[index]).tag(index)
-                            }
-                        }
-                    .pickerStyle(SegmentedPickerStyle())
-                    .padding()
-                Spacer()
-            }
+            Lista_1()
                 .tabItem {
                     Image(systemName: "person.crop.circle")
                     Text("Profile")
@@ -172,7 +108,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        /*ContentView()*/
         ContentView(cards: ListModel.sampleData)
     }
 }
