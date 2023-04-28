@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct prova: View {
+struct CardView: View {
     let card: ListModel
     var body: some View {
         VStack(alignment: .leading) {
@@ -24,10 +24,10 @@ struct prova: View {
     }
 }
 
-struct prova_Previews: PreviewProvider {
+struct CardView_Previews: PreviewProvider {
     static var list = ListModel.sampleData[0]
     static var previews: some View {
-        prova(card : list)
+        CardView(card : list)
             .previewLayout(.fixed(width: 400, height: 60))
     }
 }
