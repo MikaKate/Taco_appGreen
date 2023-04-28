@@ -11,6 +11,7 @@ struct ContentView: View {
     @State private var selectedOption = 0
     //variabili per la pagina "liste"
     @State private var optionsList = ["Recent", "Categories"]
+    let cards: [ListModel]
 
     //variabili per la pagina "prodotti"
     @State private var optionsProducts = ["Low Risk", "All", "High Risk"]
@@ -46,11 +47,18 @@ struct ContentView: View {
                         }
                     .pickerStyle(SegmentedPickerStyle())
                     .padding()
-                NavigationView(){
-                    List {
-                        NavigationLink("Lista 1", destination: Lista_1())
-                        Text("Name")
-                    }
+                /*
+                 NavigationView(){
+                     List {
+                         NavigationLink("name-code-date", destination: Lista_1())
+                         NavigationLink("name-code-date", destination: Lista_1())
+                         NavigationLink("name-code-date", destination: Lista_1())
+                         Text("Name")
+                     }
+                 }
+                 */
+                List(cards, id: \.title) { cards in
+                    prova(card : cards)
                 }
             }
                 .tabItem {
@@ -164,6 +172,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        /*ContentView()*/
+        ContentView(cards: ListModel.sampleData)
     }
 }
