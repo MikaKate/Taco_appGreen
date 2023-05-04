@@ -34,8 +34,12 @@ struct ListView: View {
                     }
                 .pickerStyle(SegmentedPickerStyle())
                 .padding()
-            List(cards, id: \.title) { cards in
-                CardView(card : cards)
+            NavigationView() {
+                List(cards, id: \.title) { cards in
+                    NavigationLink(destination: ForYouView()) {
+                        CardView(card : cards)
+                    }
+                }
             }
         }
     }

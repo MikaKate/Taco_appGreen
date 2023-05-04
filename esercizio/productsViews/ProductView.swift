@@ -42,10 +42,13 @@ struct ProductView: View {
             }
             NavigationView(){
                 List {
-                    NavigationLink("name-code-date", destination: Lista_1())
-                    NavigationLink("name-code-date", destination: Lista_1())
-                    NavigationLink("name-code-date", destination: Lista_1())
+                    NavigationLink("name-code-date", destination: ProfileView())
+                    NavigationLink("name-code-date", destination: ProfileView())
+                    NavigationLink("name-code-date", destination: ProfileView())
                     Text("Name")
+                    NavigationLink("Text"){
+                        Text("Prova")
+                    }
                 }
             }
         }

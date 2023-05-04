@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Lista_1: View {
+struct ProfileView: View {
     @State private var selectedOption = 0
     @State private var optionsProfile = ["Settings", "Favourites", "Friends"]
     
@@ -27,8 +27,8 @@ struct Lista_1: View {
     }
 }
 
-struct Lista_1_Previews: PreviewProvider {
+struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        Lista_1()
+        ProfileView()
     }
 }

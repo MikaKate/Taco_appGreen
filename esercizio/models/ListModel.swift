@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ListModel {
+struct ListModel: Hashable {
     var title: String
     var users: [String]
     var date: String

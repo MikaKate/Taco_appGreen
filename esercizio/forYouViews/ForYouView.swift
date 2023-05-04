@@ -30,9 +30,8 @@ struct ForYouView: View {
             }
             .padding(.horizontal, 20)
             Picker(selection: $selectedOption, label: Text("")) {
-                    ForEach(0..<2) { index in Text(optionsForYou[index]).tag(index)
-                        }
-                    }
+                ForEach(0..<2) { index in Text(optionsForYou[index]).tag(index)}
+                }
                 .pickerStyle(SegmentedPickerStyle())
                 .padding()
             HStack{
@@ -41,9 +40,9 @@ struct ForYouView: View {
             }
             NavigationView(){
                 List {
-                    NavigationLink("name-code-date", destination: Lista_1())
-                    NavigationLink("name-code-date", destination: Lista_1())
-                    NavigationLink("name-code-date", destination: Lista_1())
+                    NavigationLink("name-code-date", destination: ProfileView())
+                    NavigationLink("name-code-date", destination: ProfileView())
+                    NavigationLink("name-code-date", destination: ProfileView())
                     Text("Name")
                 }
             }
