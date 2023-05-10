@@ -13,6 +13,7 @@ struct ForYouView: View {
     @State private var text = ""
     
     var body: some View {
+        
         VStack{
             HStack {
                 Button(action: {

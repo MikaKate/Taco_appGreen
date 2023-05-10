@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53039C1F2A05073900317DA1 /* ListNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53039C1E2A05073900317DA1 /* ListNavigationView.swift */; };
 		535D2DAD29FBC2B400890CD1 /* ForYouView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535D2DAC29FBC2B400890CD1 /* ForYouView.swift */; };
 		535D2DB029FBC54E00890CD1 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535D2DAF29FBC54E00890CD1 /* ProductView.swift */; };
 		535D2DB329FBC5CE00890CD1 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535D2DB229FBC5CE00890CD1 /* ListView.swift */; };
@@ -21,6 +22,8 @@
 		53B4E0D129CDBA0800665140 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B4E0D029CDBA0800665140 /* CardView.swift */; };
 		53D62CB629FCFBA300E6E795 /* SliderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D62CB529FCFBA300E6E795 /* SliderManager.swift */; };
 		53EDE8BA2A039E4200AF037F /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EDE8B92A039E4200AF037F /* FormView.swift */; };
+		53EDE8BC2A03A7DD00AF037F /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EDE8BB2A03A7DD00AF037F /* DetailView.swift */; };
+		53EDE8C02A03B09C00AF037F /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EDE8BF2A03B09C00AF037F /* DetailModel.swift */; };
 		53FDDC4A29F2902500C16C9B /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FDDC4929F2902500C16C9B /* ListModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		53039C1E2A05073900317DA1 /* ListNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNavigationView.swift; sourceTree = "<group>"; };
 		535D2DAC29FBC2B400890CD1 /* ForYouView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouView.swift; sourceTree = "<group>"; };
 		535D2DAF29FBC54E00890CD1 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
 		535D2DB229FBC5CE00890CD1 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
@@ -60,6 +64,8 @@
 		53B4E0D029CDBA0800665140 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		53D62CB529FCFBA300E6E795 /* SliderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderManager.swift; sourceTree = "<group>"; };
 		53EDE8B92A039E4200AF037F /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
+		53EDE8BB2A03A7DD00AF037F /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		53EDE8BF2A03B09C00AF037F /* DetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
 		53FDDC4929F2902500C16C9B /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,6 +124,8 @@
 				53B4E0D029CDBA0800665140 /* CardView.swift */,
 				53EDE8B92A039E4200AF037F /* FormView.swift */,
 				535D2DB229FBC5CE00890CD1 /* ListView.swift */,
+				53039C1E2A05073900317DA1 /* ListNavigationView.swift */,
+				53EDE8BB2A03A7DD00AF037F /* DetailView.swift */,
 			);
 			path = listViews;
 			sourceTree = "<group>";
@@ -189,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				53FDDC4929F2902500C16C9B /* ListModel.swift */,
+				53EDE8BF2A03B09C00AF037F /* DetailModel.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -323,11 +332,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53EDE8C02A03B09C00AF037F /* DetailModel.swift in Sources */,
 				535D2DB329FBC5CE00890CD1 /* ListView.swift in Sources */,
 				53D62CB629FCFBA300E6E795 /* SliderManager.swift in Sources */,
 				53EDE8BA2A039E4200AF037F /* FormView.swift in Sources */,
 				53B4E0A629CDB03100665140 /* ContentView.swift in Sources */,
+				53039C1F2A05073900317DA1 /* ListNavigationView.swift in Sources */,
 				53B4E0A429CDB03100665140 /* esercizioApp.swift in Sources */,
+				53EDE8BC2A03A7DD00AF037F /* DetailView.swift in Sources */,
 				535D2DAD29FBC2B400890CD1 /* ForYouView.swift in Sources */,
 				53B4E0D129CDBA0800665140 /* CardView.swift in Sources */,
 				535D2DB029FBC54E00890CD1 /* ProductView.swift in Sources */,

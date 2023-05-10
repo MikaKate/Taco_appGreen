@@ -34,12 +34,10 @@ struct ListView: View {
                     }
                 .pickerStyle(SegmentedPickerStyle())
                 .padding()
-            NavigationView() {
-                List(cards, id: \.title) { cards in
-                    NavigationLink(destination: ForYouView()) {
-                        CardView(card : cards)
-                    }
-                }
+            if selectedOption == 1{
+                ProfileView()
+            }else{
+             ListNavigationView(cards: ListModel.sampleData)
             }
         }
     }
